@@ -1033,7 +1033,7 @@
                   <textarea id="message" name="message" data-placeholder="contact.placeholders.message" placeholder="Tell us what you need, quantity, urgency, and any project details that help us understand the requirement." required></textarea>
                 </div>
                 <div class="field-full">
-                  <button type="submit" class="btn btn-primary" id="quoteSubmitBtn" data-i18n="contact.labels.submit">Submit Request</button>
+                  <button type="submit" class="btn btn-primary" onclick="trackLead()" id="quoteSubmitBtn" data-i18n="contact.labels.submit">Submit Request</button>
                   <p id="formStatus" style="margin-top:12px;color:#dbe6f4;font-size:0.95rem;"></p>
                 </div>
               </div>
@@ -1567,9 +1567,39 @@
       localStorage.setItem('his-locale-mode', 'auto');
       renderLangMenu();
       renderCards();
-    }
+    } 
 
-    initLocale();
-  </script>
+// ===== TRACKING EVENTS =====
+
+function trackLead() {
+  gtag('event', 'lead_submitted', {
+    event_category: 'engagement',
+    event_label: 'contact_form'
+  });
+}
+
+let scrollTracked = false;
+
+window.addEventListener('scroll', () => {
+  const scrollPercent = ((window.scrollY + window.innerHeight) / document.body.scrollHeight) * 100;
+
+  if (!scrollTracked && scrollPercent >= 75) {
+    scrollTracked = true;
+    gtag('event', 'scroll_75', {
+      event_category: 'engagement',
+      event_label: 'page_scroll'
+    });
+  }
+});
+
+setTimeout(() => {
+  gtag('event', 'engaged_30_seconds', {
+    event_category: 'engagement',
+    event_label: '30_seconds'
+  });
+}, 30000);
+
+1571   initLocale();
+1572 </script>
 </body>
 </html>
