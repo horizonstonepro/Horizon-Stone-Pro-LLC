@@ -1540,7 +1540,7 @@
 
       currentLocale = detectLocaleFromBrowser();
       renderLangMenu();
-      renderCards();
+      renderCards(); 
 
       const ipLocale = await detectLocaleFromIP();
       if (!ipLocale || !LANGS[ipLocale]) return;
