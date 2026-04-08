@@ -859,7 +859,7 @@
         <a href="#process" data-i18n="nav.process">How It Works</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
-        <a href="#contactForm" class="btn btn-primary" style="justify-self:start;" data-i18n="nav.requestQuote">Get Pricing & Availability</a>
+        <a href="#contactForm" class="btn btn-primary" style="justify-self:start;" data-i18n="nav.requestQuote" onclick="if(window.gtag){gtag('event','click_cta_top',{event_category:'engagement',event_label:'Top CTA'});}">Get Pricing & Availability</a>
       </div>
     </div>
   </header>
@@ -879,7 +879,7 @@
           <p data-i18n="hero.description">We source critical semiconductor and industrial components for construction, energy, and industrial teams — when delays, downtime, and supply issues are not an option.</p>
 
           <div class="hero-actions">
-            <a href="#contactForm" class="btn btn-primary" data-i18n="hero.primary">Get Pricing & Availability</a>
+            <a href="#contactForm" class="btn btn-primary" data-i18n="hero.primary" onclick="if(window.gtag){gtag('event','click_cta_top',{event_category:'engagement',event_label:'Top CTA'});}">Get Pricing & Availability</a>
             <a href="#capabilities" class="btn btn-secondary" data-i18n="hero.secondary">View Capabilities</a>
           </div>
 
@@ -904,7 +904,7 @@
             <li data-i18n="hero.panelPoints.2">Urgent replacements needed to protect schedule or uptime</li>
             <li data-i18n="hero.panelPoints.3">Teams that need direct communication and clear follow-through</li>
           </ul>
-          <a href="#contactForm" class="btn btn-secondary" data-i18n="hero.primary">Get Pricing & Availability</a>
+          <a href="#contactForm" class="btn btn-secondary" data-i18n="hero.primary" onclick="if(window.gtag){gtag('event','click_cta_top',{event_category:'engagement',event_label:'Top CTA'});}">Get Pricing & Availability</a>
         </div>
       </div>
     </section>
@@ -1019,7 +1019,7 @@
                   <textarea id="message" name="message" data-placeholder="contact.placeholders.message" placeholder="Tell us what you need, quantity, urgency, and required delivery timeline." required></textarea>
                 </div>
                 <div class="field-full">
-                  <button type="submit" class="btn btn-primary" id="quoteSubmitBtn" data-i18n="contact.labels.submit">Get Pricing & Availability</button>
+                  <button type="submit" class="btn btn-primary" id="quoteSubmitBtn" data-i18n="contact.labels.submit" onclick="if(window.gtag){gtag('event','submit_form',{event_category:'conversion',event_label:'Contact Form'});}">Get Pricing & Availability</button>
                   <p id="formStatus" style="margin-top:12px;color:#dbe6f4;font-size:0.95rem;"></p>
                 </div>
               </div>
@@ -1048,7 +1048,7 @@
           <h4 data-i18n="footer.quickLinksTitle">Quick Links</h4>
           <p><a href="#capabilities" data-i18n="nav.capabilities">Capabilities</a></p>
           <p><a href="#industries" data-i18n="nav.industries">Industries</a></p>
-          <p><a href="#contactForm" data-i18n="nav.requestQuote">Get Pricing & Availability</a></p>
+          <p><a href="#contactForm" data-i18n="nav.requestQuote" onclick="if(window.gtag){gtag('event','click_cta_mid',{event_category:'engagement',event_label:'Mid CTA'});}">Get Pricing & Availability</a></p>
         </div>
         <div>
           <h4 data-i18n="footer.legalTitle">Legal</h4>
@@ -1078,7 +1078,7 @@
           <p id="modalDescription"></p>
           <ul id="modalItems"></ul>
           <p data-i18n="industries.modalPrompt">Need help sourcing for this type of work? Send your request and we will review it directly.</p>
-          <button class="btn btn-primary" id="modalQuoteBtn" data-i18n="industries.modalQuote">Get Pricing & Availability</button>
+          <button class="btn btn-primary" id="modalQuoteBtn" data-i18n="industries.modalQuote" onclick="if(window.gtag){gtag('event','click_cta_mid',{event_category:'engagement',event_label:'Modal CTA'});}">Get Pricing & Availability</button>
         </div>
       </div>
     </div>
