@@ -839,7 +839,14 @@
             <button class="lang-btn" id="langBtn"><span class="flag" id="langFlag">🇺🇸</span><span id="langName">English</span> ▾</button>
             <div class="lang-menu hidden" id="langMenu"></div>
           </div>
-          <a href="#contactForm" class="nav-cta" data-i18n="nav.requestQuote">Get Pricing & Availability</a>
+          <a 
+  href="#contactForm" 
+  class="nav-cta" 
+  data-i18n="nav.requestQuote"
+  onclick="if(window.gtag){gtag('event','click_cta_top',{event_category:'engagement',event_label:'Top CTA'});}"
+>
+  Get Pricing & Availability
+</a>
         </div>
       </div>
     </div>
