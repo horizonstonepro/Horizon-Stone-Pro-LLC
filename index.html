@@ -1583,6 +1583,24 @@
     }, 30000);
 
     initLocale();
-  </script>
+    </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+
+  if (form) {
+    form.addEventListener("submit", function () {
+      if (typeof gtag === "function") {
+        gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'contact_form'
+        });
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>
