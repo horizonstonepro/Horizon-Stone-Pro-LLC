@@ -772,6 +772,206 @@ gtag('config', 'G-XH3NT91CM4');
       cursor: pointer;
     }
 
+    .proof-visual-grid,
+    .source-grid,
+    .projects-grid,
+    .testimonial-grid,
+    .risk-grid {
+      display: grid;
+      gap: 22px;
+    }
+    .proof-visual-grid,
+    .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .source-grid,
+    .risk-grid,
+    .testimonial-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .project-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0 0 26px;
+    }
+    .project-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      color: #dbe6f4;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.22s ease;
+    }
+    .project-filter-btn:hover,
+    .project-filter-btn.active {
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 10px 26px rgba(37,99,235,0.22);
+    }
+
+    .project-card,
+    .testimonial-card,
+    .source-card,
+    .risk-card,
+    .proof-visual-card {
+      border-radius: 24px;
+      overflow: hidden;
+    }
+    .project-card,
+    .testimonial-card,
+    .risk-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 28px;
+    }
+    .source-card,
+    .proof-visual-card {
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+      border: 1px solid #e5edf6;
+      padding: 28px;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.05);
+    }
+    .source-card h3,
+    .proof-visual-card h3 { color: #0f172a; margin-bottom: 12px; font-size: 1.16rem; }
+    .source-card p,
+    .proof-visual-card p { color: #61728a; font-size: 0.97rem; }
+
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .project-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(56,189,248,0.14);
+      color: #bfe9ff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .project-time {
+      color: #8fb0cd;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    .project-card h3,
+    .testimonial-card h3,
+    .risk-card h3 {
+      color: #fff;
+      margin-bottom: 12px;
+      font-size: 1.18rem;
+    }
+    .project-card p,
+    .testimonial-card p,
+    .risk-card p {
+      color: #c4d2e4;
+      font-size: 0.96rem;
+    }
+    .project-list,
+    .risk-list,
+    .source-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 18px;
+    }
+    .project-list li,
+    .risk-list li {
+      color: #deebf8;
+      position: relative;
+      padding-left: 20px;
+    }
+    .project-list li::before,
+    .risk-list li::before,
+    .source-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #38bdf8;
+      font-weight: 800;
+    }
+    .source-list li {
+      color: #314155;
+      position: relative;
+      padding-left: 18px;
+    }
+    .project-outcome {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #deebf8;
+    }
+    .project-actions {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .testimonial-card { position: relative; }
+    .testimonial-quote {
+      color: #7dd3fc;
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+    .testimonial-footer {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .testimonial-footer strong {
+      display: block;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .testimonial-footer span {
+      color: #9db4cf;
+      font-size: 0.92rem;
+    }
+
+    .proof-cta-banner {
+      margin-top: 28px;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      color: #fff;
+      border-radius: 26px;
+      padding: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 18px 40px rgba(37,99,235,0.24);
+    }
+    .proof-cta-banner h3 { margin-bottom: 8px; font-size: 1.35rem; }
+    .proof-cta-banner p { color: rgba(255,255,255,0.92); max-width: 720px; }
+    .proof-cta-banner .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    @media (max-width: 1120px) {
+      .proof-visual-grid,
+      .projects-grid,
+      .source-grid,
+      .testimonial-grid,
+      .risk-grid { grid-template-columns: 1fr; }
+    }
+
+
     @media (max-width: 1120px) {
       .hero-inner, .contact-shell, .footer-grid, .modal-layout { grid-template-columns: 1fr; }
       .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -831,6 +1031,8 @@ gtag('config', 'G-XH3NT91CM4');
           <a href="#home" data-i18n="nav.home">Home</a>
           <a href="#capabilities" data-i18n="nav.capabilities">Capabilities</a>
           <a href="#industries" data-i18n="nav.industries">Industries</a>
+          <a href="#projects">Projects</a>
+          <a href="#sources">What We Source</a>
           <a href="#process" data-i18n="nav.process">How It Works</a>
           <a href="#faq" data-i18n="nav.faq">FAQ</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -858,6 +1060,8 @@ gtag('config', 'G-XH3NT91CM4');
         <a href="#home" data-i18n="nav.home">Home</a>
         <a href="#capabilities" data-i18n="nav.capabilities">Capabilities</a>
         <a href="#industries" data-i18n="nav.industries">Industries</a>
+        <a href="#projects">Projects</a>
+        <a href="#sources">What We Source</a>
         <a href="#process" data-i18n="nav.process">How It Works</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -945,6 +1149,222 @@ gtag('config', 'G-XH3NT91CM4');
           <p data-i18n="industries.description">Each industry block supports a serious buying experience and a grounded commercial message.</p>
         </div>
         <div class="grid-3" id="industriesGrid"></div>
+      </div>
+    </section>
+
+    <section class="section-dark" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Selected projects</span>
+          <h2>Proof of work that makes the sourcing model feel real.</h2>
+          <p>These examples help buyers understand how Horizon supports urgent requests, schedule-sensitive operations, and difficult-to-source industrial needs.</p>
+        </div>
+
+        <div class="project-filters" id="projectFilters">
+          <button class="project-filter-btn active" type="button" data-filter="all">All</button>
+          <button class="project-filter-btn" type="button" data-filter="energy">Energy</button>
+          <button class="project-filter-btn" type="button" data-filter="electrical">Electrical</button>
+          <button class="project-filter-btn" type="button" data-filter="industrial">Industrial</button>
+          <button class="project-filter-btn" type="button" data-filter="semiconductor">Semiconductor</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card" data-project-category="energy">
+            <div class="project-meta">
+              <span class="project-tag">Energy</span>
+              <span class="project-time">48-hour response window</span>
+            </div>
+            <h3>Critical inverter-related component sourcing for a utility-scale energy schedule</h3>
+            <p>A field team needed urgent sourcing support to avoid extended downtime, delayed coordination, and schedule exposure.</p>
+            <ul class="project-list">
+              <li>Rapid part identification and request review</li>
+              <li>Supplier coordination under schedule pressure</li>
+              <li>Direct buyer communication and follow-through</li>
+            </ul>
+            <div class="project-outcome"><strong>Outcome:</strong> The buyer received a fast sourcing path for a time-sensitive request.</div>
+            <div class="project-actions">
+              <a href="#contactForm" class="btn btn-secondary">Get Pricing &amp; Availability</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-project-category="electrical">
+            <div class="project-meta">
+              <span class="project-tag">Electrical</span>
+              <span class="project-time">High-priority sourcing</span>
+            </div>
+            <h3>Industrial electrical part sourcing support for a continuity-sensitive operation</h3>
+            <p>Standard procurement timelines were not aligned with operational urgency, requiring a more direct sourcing process.</p>
+            <ul class="project-list">
+              <li>Focused commercial follow-up</li>
+              <li>Availability path review with the buyer</li>
+              <li>Support built around urgency instead of passive catalog browsing</li>
+            </ul>
+            <div class="project-outcome"><strong>Outcome:</strong> Faster buyer decision-making and stronger process confidence.</div>
+            <div class="project-actions">
+              <a href="#contactForm" class="btn btn-secondary">Get Pricing &amp; Availability</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-project-category="industrial">
+            <div class="project-meta">
+              <span class="project-tag">Industrial</span>
+              <span class="project-time">Schedule-protection focus</span>
+            </div>
+            <h3>Urgent replacement sourcing for an industrial team facing downtime risk</h3>
+            <p>The client needed a sourcing partner that could move quickly, communicate clearly, and stay aligned with operational pressure.</p>
+            <ul class="project-list">
+              <li>Fast request review and buyer coordination</li>
+              <li>Direct communication on sourcing progress</li>
+              <li>Commercial support structured around real urgency</li>
+            </ul>
+            <div class="project-outcome"><strong>Outcome:</strong> Improved buyer confidence during a high-pressure sourcing situation.</div>
+            <div class="project-actions">
+              <a href="#contactForm" class="btn btn-secondary">Get Pricing &amp; Availability</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-project-category="semiconductor">
+            <div class="project-meta">
+              <span class="project-tag">Semiconductor</span>
+              <span class="project-time">Difficult-to-source request</span>
+            </div>
+            <h3>Targeted semiconductor sourcing support where lead times created risk</h3>
+            <p>The request involved sourcing pressure around parts that were not easily available through standard channels.</p>
+            <ul class="project-list">
+              <li>Focused sourcing model for harder-to-find components</li>
+              <li>Serious buyer support, not retail-style selling</li>
+              <li>Follow-through built for credibility and speed</li>
+            </ul>
+            <div class="project-outcome"><strong>Outcome:</strong> Stronger trust signal for buyers navigating constrained supply conditions.</div>
+            <div class="project-actions">
+              <a href="#contactForm" class="btn btn-secondary">Get Pricing &amp; Availability</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-head" style="max-width:820px;margin-top:68px;">
+          <span class="eyebrow">Buyer feedback</span>
+          <h2>Testimonials work better than open comments in industrial B2B.</h2>
+          <p>Instead of public comments, this section gives you controlled proof that feels more serious, more credible, and more aligned with how industrial buyers actually evaluate suppliers.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-quote">“</div>
+            <p>Horizon moved quickly, communicated clearly, and treated the request like it mattered operationally.</p>
+            <div class="testimonial-footer">
+              <strong>Project Buyer</strong>
+              <span>Energy Sector</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-quote">“</div>
+            <p>The follow-up felt direct and professional. That matters when downtime and schedule pressure are already on the table.</p>
+            <div class="testimonial-footer">
+              <strong>Operations Contact</strong>
+              <span>Industrial Team</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-quote">“</div>
+            <p>We were not looking for a catalog. We needed responsive sourcing support, and that is exactly how the process felt.</p>
+            <div class="testimonial-footer">
+              <strong>Procurement Contact</strong>
+              <span>Electrical Supply Need</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light" id="sources">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What we source</span>
+          <h2>Clearer scope helps buyers know immediately whether Horizon fits the request.</h2>
+          <p>This section makes the site more specific without turning it into a retail catalog. It keeps the business positioned as a sourcing partner while showing the kinds of requests you commonly support.</p>
+        </div>
+
+        <div class="source-grid">
+          <article class="source-card">
+            <div class="icon-badge">01</div>
+            <h3>Industrial electrical components</h3>
+            <p>Components commonly used in operations, maintenance, construction, and field execution where a delay can affect schedule or uptime.</p>
+            <ul class="source-list">
+              <li>Circuit breakers and protection devices</li>
+              <li>Relays, controls, and support components</li>
+              <li>Switchgear-related replacement needs</li>
+            </ul>
+          </article>
+          <article class="source-card">
+            <div class="icon-badge">02</div>
+            <h3>Semiconductors and hard-to-find parts</h3>
+            <p>Built for buyers who need help with constrained, delayed, niche, or harder-to-source components through trusted supply channels.</p>
+            <ul class="source-list">
+              <li>Power semiconductors and support components</li>
+              <li>Inverter-related parts</li>
+              <li>Time-sensitive replacement parts</li>
+            </ul>
+          </article>
+          <article class="source-card">
+            <div class="icon-badge">03</div>
+            <h3>Urgent sourcing scenarios</h3>
+            <p>The commercial model is strongest when the buyer needs speed, clear follow-up, and a sourcing partner who treats the request like a live operational issue.</p>
+            <ul class="source-list">
+              <li>Downtime risk and schedule pressure</li>
+              <li>Requests that need direct communication</li>
+              <li>Availability reviews through established channels</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark" id="why-horizon">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why Horizon</span>
+          <h2>What makes the model valuable is not just access to parts — it is how the request gets handled.</h2>
+          <p>This section reduces buyer hesitation by explaining why a direct sourcing partner can be more useful than leaving everything to slow, standard procurement paths.</p>
+        </div>
+
+        <div class="risk-grid">
+          <article class="risk-card">
+            <h3>Reduce friction</h3>
+            <p>Buyers need a process that feels direct, organized, and commercially serious from the first message.</p>
+            <ul class="risk-list">
+              <li>Direct communication instead of passive browsing</li>
+              <li>Faster review of request context and urgency</li>
+              <li>Clear next-step visibility</li>
+            </ul>
+          </article>
+          <article class="risk-card">
+            <h3>Reduce schedule exposure</h3>
+            <p>Industrial and construction teams care about delays more than marketing language. This makes that concern explicit.</p>
+            <ul class="risk-list">
+              <li>Built for schedule-sensitive situations</li>
+              <li>Useful when standard channels feel too slow</li>
+              <li>Aligned with downtime and continuity concerns</li>
+            </ul>
+          </article>
+          <article class="risk-card">
+            <h3>Reduce buyer uncertainty</h3>
+            <p>Confidence comes from clarity, not hype. The page should show buyers exactly why the process feels reliable.</p>
+            <ul class="risk-list">
+              <li>Trusted supply channels</li>
+              <li>Professional handling of requests</li>
+              <li>A more credible B2B buying experience</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="proof-cta-banner">
+          <div>
+            <h3>Need pricing and availability on a live request?</h3>
+            <p>Send the part number, quantity, urgency, and any timing constraints. The form is already connected and every main CTA on the page can keep driving back to it.</p>
+          </div>
+          <a href="#contactForm" class="btn btn-secondary" onclick="if(window.gtag){gtag('event','click_cta_mid',{event_category:'engagement',event_label:'Why Horizon CTA'});}">Get Pricing &amp; Availability</a>
+        </div>
       </div>
     </section>
 
@@ -1050,6 +1470,8 @@ gtag('config', 'G-XH3NT91CM4');
           <h4 data-i18n="footer.quickLinksTitle">Quick Links</h4>
           <p><a href="#capabilities" data-i18n="nav.capabilities">Capabilities</a></p>
           <p><a href="#industries" data-i18n="nav.industries">Industries</a></p>
+          <p><a href="#projects">Projects</a></p>
+          <p><a href="#sources">What We Source</a></p>
           <p><a href="#contactForm" data-i18n="nav.requestQuote" onclick="if(window.gtag){gtag('event','click_cta_mid',{event_category:'engagement',event_label:'Mid CTA'});}">Get Pricing & Availability</a></p>
         </div>
         <div>
@@ -1583,6 +2005,20 @@ gtag('config', 'G-XH3NT91CM4');
         event_label: '30_seconds'
       });
     }, 30000);
+
+    document.addEventListener('click', (event) => {
+      const filterBtn = event.target.closest('.project-filter-btn');
+      if (!filterBtn) return;
+
+      const filter = filterBtn.getAttribute('data-filter');
+      document.querySelectorAll('.project-filter-btn').forEach(btn => btn.classList.remove('active'));
+      filterBtn.classList.add('active');
+
+      document.querySelectorAll('[data-project-category]').forEach(card => {
+        const category = card.getAttribute('data-project-category');
+        card.classList.toggle('hidden', filter !== 'all' && category !== filter);
+      });
+    });
 
     initLocale();
     </script>
